@@ -12,7 +12,7 @@ function GoogleProvider({ children,  ...props }) {
   const user = useAuth()
   const [isValidUser, setIsValidUser] = useState(null)
   const provider = new GoogleAuthProvider()
-  const auth = getAuth()
+  // const auth = getAuth()
 
   //request a sign in with pop window pass the provider
   async function requestLogin() {
