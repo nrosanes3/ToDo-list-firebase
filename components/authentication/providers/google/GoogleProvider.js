@@ -22,7 +22,7 @@ function GoogleProvider({ children,  ...props }) {
   //click event passing to a custom function
   function handleClick(){
     //sign in with google
-    console.log(1)
+    console.log(3)
     requestLogin()
   }
 
