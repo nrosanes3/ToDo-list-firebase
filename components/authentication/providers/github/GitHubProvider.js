@@ -14,7 +14,7 @@ function GitHubProvider({ children, ...props }) {
   const provider = new GithubAuthProvider()
 
   async function requestLogin(){
-    isValidUser( await signInWithPopup(auth, provider))
+    setisValidUser( await signInWithPopup(auth, provider))
   }
 
   function handleClick(){
