@@ -14,7 +14,7 @@ function GoogleProvider({ children,  ...props }) {
   const provider = new GoogleAuthProvider()
   // const auth = getAuth()
 
-  //request a sign in with pop window pass the provider
+  //request a sign in with pop-up window pass the provider
   async function requestLogin() {
     setIsValidUser(await signInWithPopup(auth, provider))
   }
@@ -22,7 +22,6 @@ function GoogleProvider({ children,  ...props }) {
   //click event passing to a custom function
   function handleClick(){
     //sign in with google
-    console.log(3)
     requestLogin()
   }
 
