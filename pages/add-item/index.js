@@ -1,18 +1,15 @@
 import Head from "next/head";
 import { useEffect, useState } from "react";
-
 import {v4 as uuid} from "uuid";
 import {doc, getDoc, setDoc} from 'firebase/firestore';
-
 import { useAuth } from "lib/hooks/useAuth";
 import { AddNewItem, ItemID, AddItem, ItemDescription } from "./styles";
 import { Button } from "ui/buttons";
 import {AppBar} from 'components/appbar'
-
 import { db } from "lib/firebase";
 import { Brand } from "components/brand";
 import firebaseConfig from "lib/firebase/firebaseConfig";
- 
+
 function AddNewItemPage({...props}) {
   const user = useAuth()
   const [id, setId] = useState("")
@@ -20,7 +17,7 @@ function AddNewItemPage({...props}) {
 
   useState (()=> {
     setId(uuid().substring(0,8))
-  }, [])
+  },[])
 
   function handleSubmit (e) {
       e.preventDefault()
@@ -28,6 +25,7 @@ function AddNewItemPage({...props}) {
         id,
         description
       }
+      console.log(toDo)
       const docPath=`users/${user.uid}`
       const userDoc = doc(db, docPath)
       getDoc(userDoc).then(doc=>{

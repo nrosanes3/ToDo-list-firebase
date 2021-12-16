@@ -34,32 +34,27 @@ const PageHeader = styled.header`
         font-weight: 200;
         font-size: 1.5rem;
       }
-
 `;
 
 function index(props) {
- 
     return (
       <>
-    
        <PageHeader>
       <Brand className="brand" width="148" size="5rem"   display="column"  />      
-  
            <p>Official task management tool for tools</p>
            <LinksContainer>
            <Link href="/login" passHref>
-               <Button bgcolor="#0fa9ec" color="#ffffff">New user account setup</Button>
+            <Button bgcolor="#0fa9ec" color="#ffffff">New user account setup</Button>
           </Link>
            <Link href="/login" passHref>
-             <Button bgcolor="#0071e3" color="white">Current user account login</Button>
+            <Button bgcolor="#0071e3" color="white">Current user account login</Button>
            </Link>
           </LinksContainer>
-              <ul>              
-                <li>No Credit Card Required</li>
-                <li>Upgrade your account at anytime</li>
-              </ul>
+            <ul>              
+            <li>No Credit Card Required</li>
+            <li>Upgrade your account at anytime</li>
+            </ul>
        </PageHeader>
-       
       </>
     );
   }
